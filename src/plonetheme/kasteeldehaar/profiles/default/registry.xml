@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<registry>
+	<records prefix="plone.resources/kasteeldehaar"
+	          interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+
+	   <value key="css">
+	      <element>++plone++kasteeldehaar/css/main.less</element>
+	   </value>
+	</records>
+
+
+	<!-- bundle definition -->
+	<records prefix="plone.bundles/kasteeldehaar-bundle"
+	          interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+	  <value key="resources">
+	    <element>kasteeldehaar</element>
+	  </value>
+	  <value key="enabled">True</value>
+	  <value key="compile">True</value>
+	  <value key="jscompilation">++plone++kasteeldehaar/js/kasteeldehaar-bundle-compiled.js</value>
+	  <value key="csscompilation">++plone++kasteeldehaar/css/kasteeldehaar-bundle-compiled.css</value>
+	  <value key="last_compilation"></value>
+	</records>
+</registry>
