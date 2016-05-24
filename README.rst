@@ -1,5 +1,5 @@
 ============
- kasteeldehaar theme
+ Kasteel de Haar theme
 ============
 ------------------------------
  An installable theme for Plone 5
