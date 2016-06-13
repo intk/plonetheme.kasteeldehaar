@@ -20,5 +20,4 @@ require([
       $('body').addClass('kasteeldehaar-main');
     });
   }
-
 });

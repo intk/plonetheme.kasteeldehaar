@@ -2,7 +2,7 @@
 <registry>
 	<records prefix="plone.resources/kasteeldehaar"
 	          interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-
+	   <value key="js">++plone++kasteeldehaar/js/main.js</value>
 	   <value key="css">
 	      <element>++plone++kasteeldehaar/css/main.less</element>
 	   </value>
