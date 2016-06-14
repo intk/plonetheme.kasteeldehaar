@@ -192,6 +192,10 @@
 	}
 }
 
+body.frontend {
+	color: #595959;
+}
+
 /* Single content page */
 body.frontend, body#tinymce {
 	.ptSans();
@@ -233,10 +237,21 @@ body.frontend, body#tinymce {
 		}
 	}
 
-	&:not(.portaltype-document):not(.portaltype-collection):not(.portaltype-folder):not(.portaltype-formfolder):not(.portaltype-event) {
-		.separator-wrapper.kasteel {
-			display: none;
+	&:not(.portaltype-document):not(.portaltype-collection):not(.portaltype-folder):not(.portaltype-formfolder):not(.portaltype-event) .separator-wrapper {
+		display: none;
+	}
+
+	&.template-logged_out,
+	&.template-default_error_message,
+	&.template-login_form {
+		.separator-wrapper {
+			display: none !important;
 		}
+	}
+
+	&.template-login_form #content-core, 
+	&.template-logged_out #content-core {
+		padding: 6px 12px !important;
 	}
 
 	.separator-wrapper {
@@ -567,6 +582,95 @@ body.frontend.template-search {
 	}
 }
 
+/* Multiple content page */
+
+body.frontend {
+
+	p.event-date {
+		font-size: 18px;
+		color: #929292;
+	}
+
+	&.portaltype-collection,
+	&.portaltype-folder,
+	.portletCollection {
+		.title-container hr {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		.listing-item {
+			padding-bottom: 20px;
+		}
+
+		.item-description {
+			margin-top: 23px;
+		}
+
+		p.event-date {
+			font-size: 18px;
+			color: #929292;
+		}
+
+		.listing-item a {
+			color: #595959;
+		}
+
+		.title-container .separator-wrapper {
+			margin-bottom: 80px;
+		}
+
+		.thumb-wrapper img {
+			margin-bottom: 25px;
+		}
+
+		@media (max-width: 768px) {
+			footer {
+				padding-top: 0px;
+			}
+		}
+
+		.separator-wrapper {
+			hr {
+				@media (min-width: 768px) {
+					width: 140px;
+				}
+
+				@media (max-width: 768px) {
+					margin-top: 20px;
+					margin-bottom: 0px;
+					width: 200px;
+				}
+			}
+
+			@media(max-width: 768px) {
+				margin-top: 50px !important;
+				margin-bottom: 60px !important;
+			}
+		}
+	}
+}
+
+body.frontend.template-default_error_message div.portlet-static-footer a:hover, body.frontend.template-default_error_message div.portlet-static-footer a:active, body.frontend.template-default_error_message div.portlet-static-footer a:focus {
+    color: #929292;
+}
+
+
+body.frontend.template-default_error_message div.portlet-static-footer p a:hover, body.frontend.template-default_error_message div.portlet-static-footer p a:active, body.frontend.template-default_error_message div.portlet-static-footer p a:focus {
+    color: #595959;
+    text-decoration: none;
+}
+
+body.frontend.template-default_error_message .social-media-wrapper a:hover {
+	color: #ffffff;
+}
+
+.template-default_error_message {
+	#content-core > nav {
+		padding-top: 30px;
+	}
+}
 
 
 
