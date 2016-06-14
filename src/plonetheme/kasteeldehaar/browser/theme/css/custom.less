@@ -672,6 +672,115 @@ body.frontend.template-default_error_message .social-media-wrapper a:hover {
 	}
 }
 
+/* Front page */
+.portlet-button {
+	.buttonFieldK();
+}
+
+body.frontend {
+
+	.portlet-static-online-tickets {
+		@media (max-width: 768px) {
+			padding-top: 20px;
+		}
+
+	}
+	.portlet-static-online-tickets .portlet-button {
+		.buttonFieldK();
+		line-height: 27px;
+		width: 200px;
+		@media (min-width: 768px) {
+			margin-right: 0;
+		}
+	}
+
+	.portlet-static-online-tickets p {
+		line-height: 55px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+
+		@media (max-width: 768px) {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+body.frontend {
+	&.portaltype-portlet-page {
+		.documentLayoutK();
+		h1 {
+			font-size: 42px;
+		}
+		.portletCollection {
+			.show-more {
+				.buttonFieldK();
+				width: 200px;
+			}
+			padding-bottom: 5px;
+			padding-top: 40px;
+
+			@media (max-width: 768px) {
+				padding-top: 10px;
+				padding-bottom: 5px;
+			}
+		}
+
+		footer {
+			border-top: 1px solid #c8c8c8;
+		}
+	}
+
+	.portletCollection {
+		hr.separator {
+			margin: 0 auto;
+
+			@media (min-width: 768px) {
+				width: 200px;
+			}
+		}
+
+		.portletFooter {
+			padding-right: 0px;
+		}
+
+		.formControls a {
+			width: 200px;
+			display: block;
+			margin: 0 auto;
+			padding-bottom: 45px;
+		}
+
+		.item-title a {
+			color: #595959;
+
+			&:active,
+			&:focus,
+			&:visited,
+			&:hover {
+				color: #595959;
+			}
+		}
+	}
+
+	.social-media-wrapper {
+		p strong {
+			color: #ffffff;
+		}
+	}
+
+	.portletCollection.portlet-collection-ontdek-de-haar {
+		padding-top: 0px;
+
+		@media (max-width: 768px) {
+			.portletHeader {
+				padding-top: 1px;
+			}
+		}
+	}
+
+}
+
 
 
 
