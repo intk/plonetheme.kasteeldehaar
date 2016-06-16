@@ -2,6 +2,10 @@
 	Custom CSS for kasteeldehaar
 */
 
+body {
+	overflow-y: hidden;
+}
+
 .navbar-custom .navbar-brand {
 	color: @kasteelColor !important;
 }
@@ -683,13 +687,15 @@ body.frontend.template-default_error_message .social-media-wrapper a:hover {
 
 body.frontend {
 
-	.portlet-static-online-tickets {
+	.portlet-static-online-tickets,
+	.portlet-weekday {
 		@media (max-width: 768px) {
 			padding-top: 20px;
 		}
 
 	}
-	.portlet-static-online-tickets .portlet-button {
+	.portlet-static-online-tickets .portlet-button,
+	.portlet-weekday .portlet-button {
 		.buttonFieldK();
 		line-height: 27px;
 		width: 200px;
@@ -698,7 +704,8 @@ body.frontend {
 		}
 	}
 
-	.portlet-static-online-tickets p {
+	.portlet-static-online-tickets p,
+	.portlet-weekday p {
 		line-height: 55px;
 		margin-bottom: 0px;
 		margin-top: 0px;
@@ -809,6 +816,122 @@ body.frontend, body#tinymce {
 		}
 	}
 }
+
+body.frontend.mobile {
+	input[type='text'],
+	input[type='number'],
+	textarea {
+	  font-size: 16px;
+	}
+}
+
+
+/* Search results */
+body.frontend.template-search {
+	#search-filter-toggle {
+		display: none;
+	}
+
+	p.event-date {
+		.ptSans();
+		font-size: 18px;
+		color: #929292;
+		margin-bottom: 15px;
+    	margin-top: 15px;
+	}
+
+	h4.item-title span.highlightedSearchTerm {
+		font-weight: 800;
+		color: #000000;
+	}
+
+	h4.item-title {
+		margin-top: 10px;
+	}
+
+	input.search-btn {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+
+	#search-results-wrapper .search-item a {
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
+			color: #595959;
+
+			h4.item-title {
+				color: #595959;
+			}
+		}
+	}
+}
+
+body.frontend.template-default_error_message {
+
+	.intro-header {
+		display: none;
+	}
+
+	.page-container {
+		padding-top: 150px;
+
+		@media (max-width: 768px) {
+			padding-top: 80px;
+		}
+	}
+
+	h4.item-title {
+		margin-top: 10px;
+	}
+
+	h4.item-title span.highlightedSearchTerm {
+		font-weight: 800;
+		color: #000000;
+	}
+
+	.similar-item a {
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
+			color: #595959;
+
+			h4.item-title {
+				color: #595959;
+			}
+		}
+
+	}
+
+	@media (min-width: 768px) {
+		#content-core {
+		    width: 700px !important;
+		    margin: 0 auto !important;
+		}
+	}
+}
+
+body.frontend {
+	@media (max-width:768px) {
+		.video-play-btn,
+		.video-slide .overlay-image {
+			display: none;
+		}
+	}
+
+	@media (max-width: 468px) {
+		.slick-prev,
+		.slick-next,
+		.wrap-prev,
+		.wrap-next {
+			display: none;
+		}
+	}
+}
+
+
 
 
 
