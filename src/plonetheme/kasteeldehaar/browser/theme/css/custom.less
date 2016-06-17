@@ -361,6 +361,28 @@ body.frontend, body#tinymce {
     		margin-bottom: initial;
     	}
     }
+
+    ::-moz-selection {
+		color: white;
+		text-shadow: none;
+		background: @kasteelColor;
+	}
+
+	::selection {
+		color: white;
+		text-shadow: none;
+		background: @kasteelColor;
+	}
+
+	img::selection {
+		color: white;
+		background: transparent;
+	}
+
+	img::-moz-selection {
+		color: white;
+		background: transparent;
+	}
 }
 
 /* Events */
