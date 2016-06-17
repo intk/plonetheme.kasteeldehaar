@@ -3,6 +3,19 @@
 
 
 /* do not include jquery multiple times */
+
+$(document).ready(function() {
+  setTimeout(function() {
+    if ($("body").hasClass('frontend')) {
+      $("#portal-logo").addClass("hide-logo");
+    } else {
+      $(".cd-nav-trigger").show();
+      $("#portal-logo").hide();
+    }
+  }, 1000);
+});
+
+
 if (window.jQuery) {
   define('jquery', [], function() {
     return window.jQuery;
@@ -21,3 +34,4 @@ require([
     });
   }
 });
+
