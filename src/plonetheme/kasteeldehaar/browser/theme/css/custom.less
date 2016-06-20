@@ -205,6 +205,29 @@ body.frontend, body#tinymce {
 	.ptSans();
 	font-size: 21px;
 
+	.pager li.active span {
+		background-color: @kasteelColor;
+		border: 1px solid @kasteelColor !important;
+	}
+
+	.pager li > a {
+		color: #595959;
+		&:hover,
+		&:active,
+		&:focus,
+		&:visited {
+			color: #595959;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: #ffffff;
+			background-color: @kasteelColor;
+			border: 1px solid @kasteelColor !important;
+		}
+	}
+
 	.title-container {
 		padding-top: 45px;
 
@@ -278,11 +301,30 @@ body.frontend, body#tinymce {
 		}
 	}
 
+	a {
+		color: @kasteelColor;
+		&:hover,
+		&:focus,
+		&:visited {
+			color: @kasteelColor;
+		}
+	}
+
 	.documentLayoutK();
 
 	&.mce-content-body,
     div#parent-fieldname-text {
     	.documentLayoutK();
+
+    	a {
+    		text-decoration: none;
+    		&:hover,
+    		&:focus,
+    		&:active,
+    		&:visited {
+    			text-decoration: underline;
+    		}
+    	}
 
     	div {
 			.ptSans();
@@ -802,7 +844,7 @@ body.frontend {
 		}
 	}
 
-	.portletCollection.portlet-collection-ontdek-de-haar {
+	.portletCollection.portlet-collection-wat-is-er-te-doen {
 		padding-top: 0px;
 
 		@media (max-width: 768px) {
@@ -835,6 +877,16 @@ body.frontend, body#tinymce {
 
 		&:not(.template-quickedit) #content .field {
 			margin-bottom: 0px;
+		}
+
+		a {
+			text-decoration: none;
+			&:hover,
+    		&:focus,
+    		&:active,
+    		&:visited {
+    			text-decoration: underline;
+    		}
 		}
 	}
 }
@@ -1011,6 +1063,12 @@ body:not(.frontend) {
 		font-size: 27px;
 		font-weight: 800;
 		letter-spacing: 0.01em;
+		color: #ffffff;
+		&:hover,
+		&:focus,
+		&:visited {
+			color: #ffffff;
+		}
 	}
 
 	.line-wrapper > li {
