@@ -3,7 +3,8 @@
 
 
 /* do not include jquery multiple times */
- 
+
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -27,26 +28,27 @@ function guid() {
 
 var cookie = getCookie('sessionid');
 if (cookie != "") {
-  $("html").addClass("no-logo-animation");
+  jQuery("html").addClass("no-logo-animation");
 } else {
   var cookie_uuid = guid();
   document.cookie = "sessionid="+cookie_uuid+"; expires=0; path=/";
 }
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
+  var $ = jQuery;
   setTimeout(function() {
-    if ($("body").hasClass('frontend')) {
-      $("#portal-logo").addClass("hide-logo");
+    if (jQuery("body").hasClass('frontend')) {
+      jQuery("#portal-logo").addClass("hide-logo");
     } else {
-      $(".cd-nav-trigger").show();
-      $("#portal-logo").hide();
+      jQuery(".cd-nav-trigger").show();
+      jQuery("#portal-logo").hide();
     }
   }, 2000);
 
   var _isLateralNavAnimating = false;
   
   //open/close lateral navigation
-  $('#portal-logo').on('click', function(event) {
+  jQuery('#portal-logo').on('click', function(event) {
     event.preventDefault();
     //stop if nav animation is running 
 
@@ -57,10 +59,10 @@ $(document).ready(function() {
     }
 
     if( !_isLateralNavAnimating ) {
-      if($(this).parents('.csstransitions').length > 0 ) _isLateralNavAnimating = true; 
+      if(jQuery(this).parents('.csstransitions').length > 0 ) _isLateralNavAnimating = true; 
       
-      $('body').toggleClass('navigation-is-open');
-      $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+      jQuery('body').toggleClass('navigation-is-open');
+      jQuery('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
         //animation is over
         _isLateralNavAnimating = false;
       });
@@ -82,8 +84,8 @@ require([
 
   // initialize only if we are in top frame
   if (window.parent === window) {
-    $(document).ready(function() {
-      $('body').addClass('kasteeldehaar-main');
+    jQuery(document).ready(function() {
+      jQuery('body').addClass('kasteeldehaar-main');
     });
   }
 });

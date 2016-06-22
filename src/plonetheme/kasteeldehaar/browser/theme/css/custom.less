@@ -566,8 +566,12 @@ footer {
 
 
 /* Mailchimp */
-.portletMailChimp {
+.portletMailChimp, .portlet-mailplus {
+
 	background-color: #f2f2f2;
+	.mpFormField {
+		margin-bottom: 15px;	
+	}
 
 	.formControls input:not(.btn) {
 		.buttonFieldK();
@@ -581,11 +585,13 @@ footer {
 
 }
 
-.portletMailChimp.portlet .portletHeader {
+.portletMailChimp.portlet .portletHeader,
+.portlet-mailplus.portlet .portletHeader {
 	padding-bottom: 20px;
 }
 
-.portletMailChimp.portlet .portletHeader span {
+.portletMailChimp.portlet .portletHeader span,
+.portlet-mailplus.portlet .portletHeader span {
     font-size: 21px;
     color: #929292;
     .ptSans();
