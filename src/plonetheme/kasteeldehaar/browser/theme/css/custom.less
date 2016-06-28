@@ -835,6 +835,10 @@ body.frontend {
 		footer {
 			border-top: 1px solid #c8c8c8;
 		}
+
+		.abovecontent-portlets {
+			display: none;
+		}
 	}
 
 	.portletCollection {
@@ -1197,6 +1201,14 @@ html.no-logo-animation {
 
 body#tinymce {
 	overflow-y: auto !important;
+}
+
+body.frontend {
+	&:not(.not-empty-slideshow) {
+		.abovecontent-portlets {
+			display: none;
+		}
+	}
 }
 
 
