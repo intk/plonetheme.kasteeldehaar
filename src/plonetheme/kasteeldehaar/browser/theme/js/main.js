@@ -5,33 +5,12 @@
 /* do not include jquery multiple times */
 
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1);
-        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-    }
-    return "";
-}
+var menuLoaded = sessionStorage.getItem('menuLoaded');
 
-function guid() {
-  function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
-  }
-  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-    s4() + '-' + s4() + s4() + s4();
-}
-
-var cookie = getCookie('sessionid');
-if (cookie != "") {
+if (menuLoaded != null && menuLoaded != undefined) {
   jQuery("html").addClass("no-logo-animation");
 } else {
-  var cookie_uuid = guid();
-  document.cookie = "sessionid="+cookie_uuid+"; expires=0; path=/";
+  sessionStorage.menuLoaded = true;
 }
 
 jQuery(document).ready(function() {
