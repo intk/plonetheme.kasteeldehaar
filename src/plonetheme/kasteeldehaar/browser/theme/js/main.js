@@ -47,12 +47,6 @@ jQuery(document).ready(function() {
       });
     }
   });
-
-  if ($('body').hasClass('mobile')) {
-    jQuery('.home-logo').on('click touchend', function(event) {
-      document.location.href = "/";
-    });
-  }
 });
 
 
