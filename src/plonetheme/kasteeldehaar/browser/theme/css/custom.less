@@ -57,7 +57,7 @@ body {
 	color: #ffffff;
 	width: auto;
 	font-size: 15px;
-	background-color: #ab0840;
+	background-color: @kasteelColor;
 	text-shadow: 0px 0px 0px #ffffff;
 	font-weight: 800;
 	letter-spacing: 0.14em;
@@ -132,7 +132,7 @@ body {
 
 .documentLayoutK() {
 	h1 {
-		color: #ab0840;
+		color: @kasteelColor;
 		font-size: 34px;
 		.ptSerif();
 	}
@@ -248,7 +248,7 @@ body.frontend, body#tinymce {
 		}
 
 		h1 {
-			color: #ab0840;
+			color: @kasteelColor;
 			margin-bottom: 22px;
 			font-size: 34px;
 			.ptSerif();
@@ -545,7 +545,7 @@ footer {
 	}
 
 	.portlet-static-social-media {
-		background-color: #ab0840;
+		background-color: @kasteelColor;
 	}
 
 	#wat-een-weelde-background {
@@ -1272,6 +1272,12 @@ body:not(.frontend) {
 
 #cd-nav .navigation-search-wrapper {
 	top: 20px;
+}
+
+body.plone-toolbar-left-expanded {
+        .nav-home-wrapper {
+            left: 150px;
+        }
 }
 
 
