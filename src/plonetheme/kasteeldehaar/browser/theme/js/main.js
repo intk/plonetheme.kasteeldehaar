@@ -47,6 +47,23 @@ jQuery(document).ready(function() {
       });
     }
   });
+
+
+  /* Slideshow button */
+  jQuery(".slideshow-btn-down").click(function() {
+    jQuery('.website-wrapper').animate({
+        scrollTop: jQuery(".portlet-weekday").offset().top
+      }, 600, function() {
+        // slide
+        var sliding = true;
+        if (slickSlideshow != undefined) {
+          if (slickSlideshow.playing) {
+            slickSlideshow.pauseCurrentSlide();
+          }
+        };
+      });
+  });
+
 });
 
 
