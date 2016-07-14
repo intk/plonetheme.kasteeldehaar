@@ -51,8 +51,13 @@ jQuery(document).ready(function() {
 
   /* Slideshow button */
   jQuery(".slideshow-btn-down").click(function() {
+    var scrollTo = ".portlet-weekday";
+    if (!jQuery(".portlet-weekday").length) {
+      scrollTo = ".portlet-static-online-tickets";
+    }
+
     jQuery('.website-wrapper').animate({
-        scrollTop: jQuery(".portlet-weekday").offset().top
+        scrollTop: jQuery(scrollTo).offset().top
       }, 600, function() {
         // slide
         var sliding = true;
