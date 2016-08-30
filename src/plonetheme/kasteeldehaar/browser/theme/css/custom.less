@@ -41,7 +41,7 @@ body {
 }
 
 .cd-nav {
-  background-color: @kasteelColor;
+  background-color: #f2f2f2;
 }
 
 .buttonFieldK() {
@@ -564,6 +564,11 @@ footer {
 	    height: 50px;
 	    background: url('++resource++plonetheme.kasteeldehaar/footer-element-04.svg');
 	    margin: 0 auto;
+
+	    @media (max-width: 768px) {
+	    	width: 80px;
+	    	height: 35px;
+	    }
 	}
 
 	@media(min-width: 768px) {
@@ -1056,7 +1061,16 @@ body.frontend {
 	cursor: pointer;
 
 	@media (max-width: 768px) {
-		margin-left: -56px;
+		width: 80px;
+		height: 50px;
+		margin-left: -47px;
+
+	}
+}
+
+body.mobile .cd-nav-trigger {
+	@media (max-width: 768px) {
+		margin-left: -40px;
 	}
 }
 
@@ -1107,11 +1121,20 @@ body:not(.frontend) {
 		font-size: 27px;
 		font-weight: 800;
 		letter-spacing: 0.01em;
-		color: #ffffff;
+		color: #595959;
 		&:hover,
 		&:focus,
 		&:visited {
-			color: #ffffff;
+			color: #595959;
+		}
+	}
+
+	ul li a {
+		color: rgba(179, 179, 179, 0.8);
+		&:hover,
+		&:focus,
+		&:visited {
+			color: rgba(179, 179, 179, 1);
 		}
 	}
 
@@ -1129,14 +1152,26 @@ body:not(.frontend) {
 	}
 }
 
+.no-touch .cd-nav .cd-primary-nav a:hover {
+  color: rgba(179, 179, 179, 1);
+}
+
 #cd-nav {
 	.language-wrapper a.lang-link {
 		font-size: 15px;
 		.ptSans();
 
+		color: #595959;
+
 		opacity: 0.9;
 		&:hover {
 			opacity: 1;
+		}
+
+		&:focus,
+		&:hover,
+		&:visited {
+			color: #595959;
 		}
 	}
 
@@ -1268,7 +1303,7 @@ body:not(.frontend) {
 			margin-bottom: auto;
 
 			a {
-				color: #ffffff;
+				color: #595959;
 				font-size: 15px;
 				line-height: 40px;
 				letter-spacing: 0.1em;
@@ -1368,6 +1403,8 @@ body.frontend div.slideshow-btn-down {
 	}
 }
 
+
+
 .cd-navigation-wrapper .social-media-wrapper {
 	ul {
 		margin: 0;
@@ -1380,7 +1417,7 @@ body.frontend div.slideshow-btn-down {
 			font-size: 18px;
 
 			.fa {
-				color: #ffffff;
+				color: #595959;
 				opacity: 0.9;
 
 				&:hover {
@@ -1402,6 +1439,23 @@ body.frontend div.slideshow-btn-down {
 		position: absolute;
 		bottom: 45px;
 		left: 50px;
+	}
+	
+}
+
+body.site-KasteelDeHaar {
+	.cd-navigation-wrapper .social-media-wrapper {
+		@media (max-width: 768px) {
+			padding-left: 0px;
+			padding-top: 35px;
+			padding-bottom: 35px;
+		}
+
+		@media (max-width: 480px) {
+			padding-left: 0px;
+			padding-top: 35px;
+			padding-bottom: 35px;
+		}
 	}
 }
 
@@ -1462,6 +1516,163 @@ body.frontend.plone-toolbar-expanded {
 		width: 85%;
 	}
 }
+
+body.site-KasteelDeHaar {
+	.nav-full-logo {
+		position: absolute;
+		z-index: 2;
+	    top: 0;
+	    left: 50%;
+	    margin-left: -63px;
+	    width: 112px;
+	    height: auto;
+	    visibility: hidden;
+
+	    a, img {
+	    	cursor: pointer;
+	    }
+
+	    @media (max-width: 992px) {
+	    	width: 80px;
+	    	margin-left: -47px;
+	    }
+	}
+
+	&.navigation-is-open .nav-full-logo {
+		display: block;
+		visibility: visible;
+	}
+
+	&.plone-toolbar-expanded .nav-full-logo {
+		left: calc(~"50% + 60px");
+	}
+
+	.cd-nav-trigger {
+		display: block;
+	}
+
+	&.navigation-is-open .cd-nav-trigger {
+		display: none;
+	}
+
+	&.plone-toolbar-expanded {
+		@media (min-width: 768px) {
+			#cd-nav .language-wrapper {
+				right: 0;
+				left: calc(~"50% + 44px");
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		#cd-nav .language-wrapper {
+			right: auto;
+			left: 50%;
+			margin-left: -38px;
+		}
+	}
+
+	#cd-nav .navigation-search-wrapper {
+		top: auto;
+		bottom: 40px;
+	}
+
+	@media (max-width: 992px) {
+		#cd-nav .navigation-search-wrapper {
+    		padding-top: 0px;
+		}
+	}
+
+	@media (max-width: 992px) {
+		#cd-nav .cd-primary-nav {
+		    margin-top: 150px;
+		}
+	}
+
+	.close-menu {
+		position: absolute;
+	    top: 22px;
+	    right: 50px;
+	    width: 20px;
+	    height: 20px;
+	    cursor: pointer;
+	    background: url('++resource++plonetheme.kasteeldehaar/close-btn.svg');
+
+	    @media (max-width: 768px) {
+	    	right: 25px;
+	    }
+	}
+}
+
+body.site-KasteelDeHaar.mobile {
+	.close-menu {
+	    @media (max-width: 768px) {
+	    	right: 10px;
+	    	z-index: 100;
+	    }
+	}
+}
+
+@media (max-width: 767px) {
+	.nav-home-wrapper {
+		display: none !important;
+	}
+
+	.language-wrapper {
+		position: absolute !important;
+		top: 23px;
+		left: 10px;
+		z-index: 100;
+
+		h5 {
+			margin-top: 0px !important;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	body.site-KasteelDeHaar #cd-nav {
+		.language-wrapper {
+			right: 50px;
+			left: auto;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.cd-primary-nav {
+		padding-top: 45px !important;
+	}
+}
+
+body.site-KasteelDeHaar.frontend {
+	.nav-full-logo {
+		position: initial;
+		margin-left: 0;
+		left: 0;
+		margin: 0 auto;
+
+		@media (min-width: 992px) {
+			a {
+				margin-left: -7px;
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		#cd-nav .cd-primary-nav {
+			margin-top: 10px !important;
+		}
+	}
+}
+
+.website-wrapper {
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
 
 
 
