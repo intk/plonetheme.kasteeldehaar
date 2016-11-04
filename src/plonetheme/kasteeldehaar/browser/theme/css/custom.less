@@ -1562,7 +1562,7 @@ body.site-KasteelDeHaar {
 	&.plone-toolbar-expanded {
 		@media (min-width: 768px) {
 			#cd-nav .language-wrapper {
-				right: 0;
+				right: auto;
 				left: calc(~"50% + 44px");
 			}
 		}
@@ -1675,6 +1675,11 @@ body.site-KasteelDeHaar.frontend {
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
+}
+
+body.frontend #slickslideshow .wrap-prev,
+body.frontend #slickslideshow .wrap-next {
+  background-color: rgba(176, 0, 62, 0.6);
 }
 
 
